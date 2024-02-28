@@ -1,0 +1,14 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        Customer customer=new Customer(1,"Nermin","Memmedli");
+        Logger[] loggers={new EmailLogger(),new DatabaseLogger()};
+        //Logger[] loggers1={new SmsLogger()};
+        CustomerManager customerManager=new CustomerManager(loggers);
+       // CustomerManager customerManager1=new CustomerManager(loggers1);
+
+        customerManager.add(customer);
+       // customerManager1.delete(customer);
+    }
+}
